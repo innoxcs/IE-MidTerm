@@ -1,0 +1,173 @@
+/* background  */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: url("./english-classroom.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+/* FullScreen */
+body::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #333333;
+  opacity: 0.7;
+}
+
+/* transparency- adding font - customizing input */
+input {
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border: 1px solid #333333;
+  height: 40px;
+  font-size: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 0.7rem;
+}
+
+/* customizing input */
+input[type="radio"] {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 10px;
+}
+
+/* positions - transform */
+.box {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin: 16px;
+  border-radius: 1rem;
+  /* width: 600px; */
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+
+/* alerts */
+#alert {
+  border: 1px solid #f44336;
+  background-color: #f4433618;
+  border-radius: 0.5rem;
+  padding: 16px;
+  margin-bottom: 16px;
+  transition: ease 0.3s;
+  color: #f44336;
+}
+
+.left {
+  margin-left: 32px;
+}
+
+/* add margin to not-last child sections */
+section:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+/*  border mode */
+.saved {
+  border: 1px dashed;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+/*  increase font */
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+/* fit-content for better user experinece */
+.clear {
+  color: red;
+  font-size: smaller;
+  cursor: pointer;
+  width: fit-content;
+}
+
+/* buttons */
+
+button {
+  width: 50%;
+  height: 40px;
+  border-radius: 0.7rem;
+  border: transparent;
+  box-shadow: 0 0 14px 2px #33333333;
+  margin-right: 10px;
+  text-transform: uppercase;
+  transition: ease 0.3s;
+}
+
+/* customizing buttons */
+button.success {
+  background-color: #4caf50;
+  color: #fff;
+  font-weight: bold;
+}
+
+button.danger {
+  background-color: #f44336;
+  color: #fff;
+  font-weight: bold;
+}
+
+button.info {
+  background-color: #2196f3;
+  color: #fff;
+  font-weight: bold;
+}
+
+button.disabled {
+  opacity: 0.5;
+}
+
+button:hover {
+  cursor: pointer;
+  box-shadow: 0 0 14px 2px #33333377;
+}
+
+/* costomize the last child button */
+.buttons > button:last-child {
+  margin-right: 0;
+}
+
+/* atomic styles */
+
+.d-flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-align-center {
+  align-items: center;
+}
+
+.flex-justify-center {
+  justify-content: center;
+}

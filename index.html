@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>IE midterm</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script type="text/javascript" src="./script.js" async></script>
+  </head>
+  <body>
+    <div class="box d-flex flex-column">
+      <div id="alert" hidden></div>
+      <div class="d-flex flex-row">
+        <div class="right">
+          <section class="name d-flex flex-column">
+            <span class="title"> Mr. or Ms.? </span>
+            <span class="input">
+              <label for="name-input">Name</label>
+              <input
+                autofocus
+                type="text"
+                id="name-input"
+                maxlength="255"
+                onkeyup="checkName(event)"
+              />
+            </span>
+          </section>
+          <section class="gender d-flex flex-column">
+            <div class="d-flex flex-align-center">
+              <input
+                type="radio"
+                name="gender"
+                id="name-gender-male"
+                value="male"
+              />
+              <label for="name-gender-male">Male</label>
+            </div>
+            <div class="d-flex flex-align-center">
+              <input
+                type="radio"
+                name="gender"
+                id="name-gender-female"
+                value="female"
+              />
+              <label for="name-gender-female">Female</label>
+            </div>
+            <span class="clear" onclick="clearSelection()">X Clear Choise</span>
+          </section>
+          <div class="buttons d-flex flex-align-center">
+            <button id="submit-btn" class="success" onclick="submit(event)">
+              submit
+            </button>
+            <button id="save-btn" class="info" onclick="saveNameGender()">
+              save
+            </button>
+          </div>
+        </div>
+        <div class="left">
+          <section class="prediction d-flex flex-column">
+            <span class="title">Prediction</span>
+            <span id="prediction-result-title">-</span>
+            <span id="prediction-result-percent">-</span>
+          </section>
+          <section class="saved d-flex flex-column">
+            <span class="title">Saved Answer</span>
+            <span id="saved-title">-</span>
+            <button class="danger" onclick="deleteNameGender()">clear</button>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
